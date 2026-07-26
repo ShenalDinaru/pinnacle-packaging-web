@@ -1,10 +1,5 @@
-/*==================================================
-            ABOUT PAGE JAVASCRIPT
-==================================================*/
 
-/*========================================
-        BACKGROUND IMAGE SLIDER
-========================================*/
+/*BACKGROUND IMAGE SLIDER*/
 
 const background = document.querySelector(".background");
 
@@ -45,9 +40,7 @@ changeBackground();
 setInterval(changeBackground, transitionTime);
 
 
-/*========================================
-        SCROLL REVEAL ANIMATION
-========================================*/
+/*SCROLL REVEAL ANIMATION*/
 
 const revealElements = document.querySelectorAll(
 
@@ -95,9 +88,7 @@ revealElements.forEach((section) => {
 });
 
 
-/*========================================
-        ACTIVE NAVIGATION LINK
-========================================*/
+/*ACTIVE NAVIGATION LINK*/
 
 const navLinks = document.querySelectorAll("nav a");
 
@@ -113,9 +104,7 @@ navLinks.forEach((link) => {
 });
 
 
-/*========================================
-        BUTTON HOVER EFFECT
-========================================*/
+/*BUTTON HOVER EFFECT*/
 
 
 const buttons = document.querySelectorAll("button");
@@ -138,9 +127,7 @@ buttons.forEach((button) => {
 });
 
 
-/*========================================
-        PAGE LOADED
-========================================*/
+/*PAGE LOADED*/
 
 window.addEventListener("load", () => {
 
