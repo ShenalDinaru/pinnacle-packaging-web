@@ -124,6 +124,25 @@ img{
 
 .heroContent .discover{
     padding:16px 36px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:30px;
+}
+
+.heroContent .discover .downArrow{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    margin-left:12px;
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+    transform:rotate(45deg);
+}
+
+.heroContent .discover:hover .downArrow{
+    transform:rotate(45deg) translateY(2px);
 }
 
 /*========================================
@@ -452,6 +471,12 @@ img{
     background:#fff;
     color:var(--deep);
     font-weight:700;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 36px;
+    border-radius:30px;
 }
 
 .ctaSection .discover:hover{

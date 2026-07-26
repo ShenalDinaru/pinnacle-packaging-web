@@ -9,10 +9,10 @@
 const background = document.querySelector(".background");
 
 const images = [
-    "../Assets/Backgrounds/bg2.jpg",
-    "../Assets/Backgrounds/bg3.jpg",
-    "../Assets/Backgrounds/bg6.jpg",
-    "../Assets/Backgrounds/bg8.jpg"
+    "Assets/Backgrounds/bg2.jpg",
+    "Assets/Backgrounds/bg3.jpg",
+    "Assets/Backgrounds/bg4.jpg",
+    "Assets/Backgrounds/bg5.jpg"
 ];
 
 let current = 0;
@@ -56,7 +56,6 @@ const revealElements = document.querySelectorAll(
      .missionSection, \
      .whySection, \
      .qualitySection, \
-     .aboutStats, \
      .ctaSection"
 
 );
@@ -115,85 +114,9 @@ navLinks.forEach((link) => {
 
 
 /*========================================
-        STAT COUNTER ANIMATION
-========================================*/
-
-const counters = document.querySelectorAll(".aboutStats h2");
-
-const counterObserver = new IntersectionObserver(
-
-    (entries) => {
-
-        entries.forEach((entry) => {
-
-            if (!entry.isIntersecting) return;
-
-            const counter = entry.target;
-
-            const text = counter.innerText;
-
-            const number = parseInt(text);
-
-            if (isNaN(number)) return;
-
-            let current = 0;
-
-            const increment = Math.ceil(number / 70);
-
-            const timer = setInterval(() => {
-
-                current += increment;
-
-                if (current >= number) {
-
-                    current = number;
-
-                    clearInterval(timer);
-
-                }
-
-                if (text.includes("+")) {
-
-                    counter.innerText = current + "+";
-
-                }
-
-                else if (text.includes("%")) {
-
-                    counter.innerText = current + "%";
-
-                }
-
-                else {
-
-                    counter.innerText = current;
-
-                }
-
-            }, 20);
-
-            counterObserver.unobserve(counter);
-
-        });
-
-    },
-
-    {
-        threshold: 0.5
-    }
-
-);
-
-counters.forEach((counter) => {
-
-    counterObserver.observe(counter);
-
-});
-
-
-/*========================================
         BUTTON HOVER EFFECT
 ========================================*/
+
 
 const buttons = document.querySelectorAll("button");
 
