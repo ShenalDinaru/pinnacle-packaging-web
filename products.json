@@ -1,0 +1,322 @@
+[
+    {
+        "name": "BOPP Packing Tape",
+        "category": "Packing Tape",
+        "filter": "packing",
+        "image": "../Assets/Products/bopp-packing-tape.jpg",
+        "shortDescription": "BOPP packing tape coated with pressure-sensitive acrylic adhesive for carton, parcel and general sealing applications.",
+        "description": "Bio Oriented Polypropylene (BOPP) Packing Tape is supplied in clear and tan options and is coated with pressure-sensitive acrylic-based adhesive. The tape is available in various coating thicknesses, with 45 microns identified as the standard in Sri Lanka. It is suitable for sealing carton boxes, parcels and stationery purposes, with customized printing options available.",
+        "applications": [
+            "Carton box sealing",
+            "Parcel sealing",
+            "General packaging",
+            "Stationery applications",
+            "Customized branded packaging"
+        ],
+        "features": [
+            "Pressure-sensitive acrylic adhesive",
+            "Available in multiple coating thicknesses",
+            "Clear and tan options",
+            "Available in attractive colours",
+            "Single or multiple colour printing available"
+        ],
+        "tags": [
+            "BOPP",
+            "Packing",
+            "Carton",
+            "Parcel"
+        ]
+    },
+
+    {
+        "name": "BOPP Colour Packing Tape",
+        "category": "Packing Tape",
+        "filter": "packing",
+        "image": "../Assets/Products/bopp-colour-packing-tape.jpg",
+        "shortDescription": "Premium BOPP tape available in vibrant colours for secure sealing, identification and presentation.",
+        "description": "BOPP Colour Packing Tape is made from Biaxially Oriented Polypropylene film and is designed for professional packaging applications. It provides strong adhesion, smooth sealing and durable performance while offering colour options that support brand visibility, identification and presentation.",
+        "applications": [
+            "Carton sealing",
+            "Product identification",
+            "Brand visibility",
+            "Commercial packaging",
+            "Industrial packaging"
+        ],
+        "features": [
+            "BOPP film construction",
+            "Strong adhesion",
+            "Smooth sealing",
+            "Wide range of vibrant colours",
+            "Resistance to moisture and temperature variations"
+        ],
+        "tags": [
+            "BOPP",
+            "Colour",
+            "Packaging",
+            "Branding"
+        ]
+    },
+
+    {
+        "name": "Kraft Paper Water Activated Tape",
+        "category": "Eco Packaging",
+        "filter": "packing",
+        "image": "../Assets/Products/kraft-paper-water-activated-tape.jpg",
+        "shortDescription": "Recyclable water-activated kraft paper tape for general, export and heavy-duty carton packaging.",
+        "description": "Water Based Acrylic Kraft Paper Tape is a general-purpose packaging tape used for carton sealing. The gummed tape is activated by water and is described as 100% recyclable, environmentally friendly, with very good adhesion and strong tensile strength. It can also be printed for advertising purposes.",
+        "applications": [
+            "Carton packaging",
+            "Automatic carton sealing",
+            "Export packaging",
+            "Steadying and bundling",
+            "Heavy-duty packaging"
+        ],
+        "features": [
+            "100% recyclable",
+            "Water activated",
+            "Strong tensile strength",
+            "Very good adhesion",
+            "Can be printed for advertising"
+        ],
+        "tags": [
+            "Kraft",
+            "Paper",
+            "Water Activated",
+            "Recyclable"
+        ]
+    },
+
+    {
+        "name": "Masking Tape",
+        "category": "Specialty Tape",
+        "filter": "specialty",
+        "image": "../Assets/Products/masking-tape.jpg",
+        "shortDescription": "Easy-to-tear pressure-sensitive paper tape designed mainly for painting and masking applications.",
+        "description": "Masking Tape is a pressure-sensitive tape made from thin, easy-to-tear paper with an adhesive designed to allow removal without leaving deposits or damaging the surface. It is mainly used for painting and masking and is also used in packaging, printing and garment industries.",
+        "applications": [
+            "Painting",
+            "Surface masking",
+            "Packaging",
+            "Printing",
+            "Garment industry"
+        ],
+        "features": [
+            "Easy-to-tear paper backing",
+            "Pressure-sensitive adhesive",
+            "Easy removal",
+            "Designed for masking",
+            "Suitable for multiple industries"
+        ],
+        "tags": [
+            "Masking",
+            "Painting",
+            "Paper",
+            "Printing"
+        ]
+    },
+
+    {
+        "name": "Aluminium Foil Tape",
+        "category": "Industrial Tape",
+        "filter": "industrial",
+        "image": "../Assets/Products/aluminium-foil-tape.jpg",
+        "shortDescription": "High-performance aluminium foil tape for HVAC, electrical shielding, insulation and technical applications.",
+        "description": "Aluminium Foil Tape is engineered with a thin aluminium foil backing and strong pressure-sensitive adhesive. It offers resistance to moisture, heat, UV radiation and chemicals. Its reflective and conductive properties make it suitable for industrial, commercial and technical applications.",
+        "applications": [
+            "HVAC systems",
+            "Electrical shielding",
+            "Insulation",
+            "Industrial applications",
+            "Technical applications"
+        ],
+        "features": [
+            "Aluminium foil backing",
+            "Strong pressure-sensitive adhesive",
+            "Moisture resistant",
+            "Heat resistant",
+            "UV and chemical resistance"
+        ],
+        "tags": [
+            "Aluminium",
+            "Foil",
+            "HVAC",
+            "Insulation"
+        ]
+    },
+
+    {
+        "name": "Double Side Tissue Tape",
+        "category": "Specialty Tape",
+        "filter": "specialty",
+        "image": "../Assets/Products/double-side-tissue-tape.jpg",
+        "shortDescription": "Double-sided tissue tape designed for strong, discreet bonding between two surfaces.",
+        "description": "Double Side Tissue Tape is produced by applying pressure-sensitive adhesive to both sides of a tissue carrier. It is easy to rip and is designed to bond two objects together, often where the final bond is intended to remain hidden.",
+        "applications": [
+            "Envelopes",
+            "Posters",
+            "Fabric embroidery",
+            "General bonding",
+            "Discreet assembly"
+        ],
+        "features": [
+            "Adhesive on both sides",
+            "Tissue carrier",
+            "Easy to rip",
+            "Strong adhesion",
+            "Discreet bonding"
+        ],
+        "tags": [
+            "Double Side",
+            "Tissue",
+            "Adhesive",
+            "Bonding"
+        ]
+    },
+
+    {
+        "name": "Filament Tape",
+        "category": "Industrial Tape",
+        "filter": "industrial",
+        "image": "../Assets/Products/filament-tape.jpg",
+        "shortDescription": "Fiberglass-reinforced pressure-sensitive tape for packaging applications requiring additional strength and durability.",
+        "description": "Filament Tape is a pressure-sensitive adhesive tape reinforced with embedded fiberglass filament. The reinforcement provides increased strength and supports long-lasting bonds. Different filament structures can be selected according to the weight and size of the product, including cross-weave structures for particularly heavy applications.",
+        "applications": [
+            "Heavy-duty packaging",
+            "Bundling",
+            "Securing products",
+            "Packaging applications requiring durability",
+            "Heavy applications"
+        ],
+        "features": [
+            "Embedded fiberglass filament",
+            "High strength",
+            "Long-lasting bond",
+            "Multiple strength options",
+            "Cross-weave option for heavy applications"
+        ],
+        "tags": [
+            "Filament",
+            "Fiberglass",
+            "Heavy Duty",
+            "Packaging"
+        ]
+    },
+
+    {
+        "name": "PVC Duct Tape",
+        "category": "Industrial Tape",
+        "filter": "industrial",
+        "image": "../Assets/Products/pvc-duct-tape.jpg",
+        "shortDescription": "Strong, flexible and waterproof PVC duct tape for sealing, bundling, securing and industrial applications.",
+        "description": "PVC Duct Tape is used for sealing air ducts and surfaces, bundling and securing materials such as cables and pipes, and a range of industrial, plumbing and electrical applications. Its strong, flexible and waterproof properties also support floor marking, safety areas, temporary patching and long-term sealing.",
+        "applications": [
+            "Air duct sealing",
+            "Cable bundling",
+            "Pipe securing",
+            "Industrial applications",
+            "Plumbing and electrical applications",
+            "Temporary patching"
+        ],
+        "features": [
+            "Strong",
+            "Flexible",
+            "Waterproof",
+            "Weather resistant",
+            "High adhesion"
+        ],
+        "tags": [
+            "PVC",
+            "Duct",
+            "Waterproof",
+            "Industrial"
+        ]
+    },
+
+    {
+        "name": "PVC Floor Marking Tape",
+        "category": "Safety Tape",
+        "filter": "safety",
+        "image": "../Assets/Products/pvc-floor-marking-tape.jpg",
+        "shortDescription": "Self-adhesive floor marking tape for safety, organization and traffic management.",
+        "description": "PVC Floor Marking Tape is used to create visual markings on floors for safety, organization and traffic management in industrial, commercial and public spaces. It can mark hazards, divide spaces, create aisles and provide directions.",
+        "applications": [
+            "Factory floor marking",
+            "Safety zones",
+            "Aisle marking",
+            "Hazard marking",
+            "Traffic management",
+            "Space organization"
+        ],
+        "features": [
+            "Self-adhesive",
+            "Visual safety marking",
+            "Cost-effective alternative to floor paint",
+            "Multiple material options",
+            "Available in different thicknesses"
+        ],
+        "tags": [
+            "PVC",
+            "Floor Marking",
+            "Safety",
+            "Warehouse"
+        ]
+    },
+
+    {
+        "name": "LLDPE Stretch Film",
+        "category": "Packaging Film",
+        "filter": "film",
+        "image": "../Assets/Products/lldpe-stretch-film.jpg",
+        "shortDescription": "Stretch film for wrapping, bundling and securing products during shipping, storage and transportation.",
+        "description": "LLDPE Stretch Film is used to wrap, bundle and secure products during shipping, storage and transportation. Its high tensile strength, puncture resistance and stretchability allow it to conform tightly around products while helping protect against shifting, dust, moisture and other damage.",
+        "applications": [
+            "Shipping",
+            "Storage",
+            "Transportation",
+            "Product wrapping",
+            "Bundling and securing"
+        ],
+        "features": [
+            "High tensile strength",
+            "Puncture resistance",
+            "High stretchability",
+            "Protects against dust and moisture",
+            "Transparent design"
+        ],
+        "tags": [
+            "LLDPE",
+            "Stretch Film",
+            "Pallet",
+            "Wrapping"
+        ]
+    },
+
+    {
+        "name": "Shrink Film",
+        "category": "Packaging Film",
+        "filter": "film",
+        "image": "../Assets/Products/shrink-film.jpg",
+        "shortDescription": "Heat-shrinkable polymer film for protecting and securing products for retail, shipping and display.",
+        "description": "Shrink Film is a polymer plastic film that shrinks tightly around an item when heat is applied. It provides protection and helps secure products for retail, shipping and display. Common types include polyolefin, PVC and polyethylene films for different applications.",
+        "applications": [
+            "Retail packaging",
+            "Shipping",
+            "Product display",
+            "Product protection",
+            "Pallet wrapping"
+        ],
+        "features": [
+            "Heat activated shrinking",
+            "Tight product conformity",
+            "Product protection",
+            "Secures products",
+            "Tamper-resistant barrier"
+        ],
+        "tags": [
+            "Shrink Film",
+            "Retail",
+            "Protection",
+            "Packaging"
+        ]
+    }
+]

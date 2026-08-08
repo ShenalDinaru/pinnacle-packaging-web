@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore Pinnacle Packaging's range of packaging tapes, specialty tapes and packaging films.">
+
+    <meta name="theme-color"
+          content="#148C86">
+
+    <title>Pinnacle Packaging | Products</title>
+
+    <link rel="icon"
+          type="image/png"
+          href="../Assets/Logos/Main Logo without BG.png">
+
+    <!-- Existing global stylesheet -->
+    <link rel="stylesheet"
+          href="styles.css">
+
+    <!-- Products-only stylesheet -->
+    <link rel="stylesheet"
+          href="products_styles.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PRODUCTS PAGE HEADER
+     ===================================================== -->
+
+<header class="productsHeader">
+
+    <a href="../index.html"
+       class="productsBrand">
+
+        <img src="../Assets/Logos/Main Logo without BG.png"
+             alt="Pinnacle Packaging Logo">
+
+        <span>
+            PINNACLE PACKAGING (PVT) LTD
+        </span>
+
+    </a>
+
+
+    <nav class="productsNav">
+
+        <a href="../index.html">
+            HOME
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+        <a href="products.html"
+           class="active">
+            PRODUCTS
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     CATALOGUE INTRO
+     PAGE NOW STARTS HERE
+     ===================================================== -->
+
+<section class="catalogueIntro"
+         id="catalogue">
+
+    <div class="catalogueIntroInner">
+
+
+        <div class="catalogueHeading">
+
+            <span class="eyebrow">
+                OUR RANGE
+            </span>
+
+            <h1>
+                Find The Right<br>
+                Packaging Solution
+            </h1>
+
+            <p>
+                Browse our product catalogue and discover packaging
+                solutions developed around quality, reliability and
+                customer requirements.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="searchWrapper">
+
+            <label for="searchInput">
+                SEARCH PRODUCTS
+            </label>
+
+            <div class="searchBox">
+
+                <span class="searchIcon">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search by product, category or application..."
+                    autocomplete="off">
+
+                <button
+                    id="clearSearch"
+                    class="clearSearch"
+                    type="button"
+                    aria-label="Clear search">
+
+                    ×
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FILTERS
+     ===================================================== -->
+
+<section class="filterSection">
+
+    <div class="filterInner">
+
+        <div class="filterLabel">
+            FILTER BY
+        </div>
+
+
+        <div class="filterButtons">
+
+            <button
+                class="filter active"
+                data-filter="all"
+                type="button">
+
+                All Products
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="packing"
+                type="button">
+
+                Packing Tapes
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="specialty"
+                type="button">
+
+                Specialty Tapes
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="industrial"
+                type="button">
+
+                Industrial Tapes
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="safety"
+                type="button">
+
+                Safety
+
+            </button>
+
+
+            <button
+                class="filter"
+                data-filter="film"
+                type="button">
+
+                Packaging Films
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCT CATALOGUE
+     ===================================================== -->
+
+<section class="productsSection">
+
+
+    <div class="productsSectionHeading">
+
+        <span class="eyebrow">
+            PINNACLE PACKAGING
+        </span>
+
+        <h2>
+            Our Product Catalogue
+        </h2>
+
+        <p>
+            Select a product to view detailed information,
+            applications and key features.
+        </p>
+
+    </div>
+
+
+    <!-- Products generated by JavaScript -->
+
+    <div class="productGrid"
+         id="productGrid">
+
+    </div>
+
+
+    <!-- NO RESULTS -->
+
+    <div class="noResults"
+         id="noResults"
+         hidden>
+
+        <div class="noResultsIcon">
+            ×
+        </div>
+
+        <h3>
+            No Products Found
+        </h3>
+
+        <p>
+            Try another search term or select a different category.
+        </p>
+
+        <button
+            id="resetFilters"
+            type="button">
+
+            VIEW ALL PRODUCTS
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCT MODAL
+     ===================================================== -->
+
+<div class="productModal"
+     id="productModal"
+     aria-hidden="true">
+
+
+    <div class="modalCard"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modalTitle">
+
+
+        <button
+            class="closeModal"
+            id="closeModal"
+            type="button"
+            aria-label="Close product details">
+
+            &times;
+
+        </button>
+
+
+        <div class="modalImageWrapper">
+
+            <img
+                id="modalImage"
+                src=""
+                alt="">
+
+        </div>
+
+
+        <div class="modalContent">
+
+
+            <span
+                id="modalCategory"
+                class="modalCategory">
+            </span>
+
+
+            <h2 id="modalTitle">
+            </h2>
+
+
+            <p
+                id="modalDescription"
+                class="modalDescription">
+            </p>
+
+
+            <div class="modalColumns">
+
+
+                <div class="modalList">
+
+                    <h3>
+                        Applications
+                    </h3>
+
+                    <ul id="modalApplications">
+                    </ul>
+
+                </div>
+
+
+                <div class="modalList">
+
+                    <h3>
+                        Key Features
+                    </h3>
+
+                    <ul id="modalFeatures">
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- INQUIRY BUTTON -->
+
+            <button
+                class="modalInquiryButton"
+                id="modalInquiry"
+                type="button">
+
+                INQUIRE ABOUT THIS PRODUCT
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <small class="emailNotice">
+
+                Your default email application will open with
+                a pre-filled inquiry.
+
+            </small>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     WHY PINNACLE
+     ===================================================== -->
+
+<section class="productValues">
+
+
+    <div class="productsSectionHeading">
+
+        <span class="eyebrow">
+            THE PINNACLE STANDARD
+        </span>
+
+        <h2>
+            Quality Behind Every Product
+        </h2>
+
+    </div>
+
+
+    <div class="valueGrid">
+
+
+        <article class="valueCard">
+
+            <div class="valueNumber">
+                01
+            </div>
+
+            <h3>
+                Quality Focus
+            </h3>
+
+            <p>
+                Strict quality checks and carefully selected
+                materials support consistent product performance.
+            </p>
+
+        </article>
+
+
+        <article class="valueCard">
+
+            <div class="valueNumber">
+                02
+            </div>
+
+            <h3>
+                Reliable Solutions
+            </h3>
+
+            <p>
+                Our range is designed to address packaging,
+                industrial and specialized customer requirements.
+            </p>
+
+        </article>
+
+
+        <article class="valueCard">
+
+            <div class="valueNumber">
+                03
+            </div>
+
+            <h3>
+                Product Development
+            </h3>
+
+            <p>
+                Continuous development allows Pinnacle Packaging
+                to expand its product range around customer needs.
+            </p>
+
+        </article>
+
+
+        <article class="valueCard">
+
+            <div class="valueNumber">
+                04
+            </div>
+
+            <h3>
+                Customer Satisfaction
+            </h3>
+
+            <p>
+                Customer satisfaction remains a central focus in
+                delivering dependable packaging solutions.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+     ===================================================== -->
+
+<section class="productsCTA">
+
+    <div class="ctaInner">
+
+        <span class="eyebrow">
+            NEED A CUSTOM SOLUTION?
+        </span>
+
+        <h2>
+            Let's Find The Right Product For You
+        </h2>
+
+        <p>
+            Tell us what you need and our team can help you identify
+            the appropriate packaging solution.
+        </p>
+
+
+        <a
+            href="mailto:shenaldinaru99@gmail.com?subject=From%20Web%20-%20Packaging%20Inquiry"
+            class="ctaButton">
+
+            CONTACT OUR TEAM
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="productsFooter">
+
+
+    <div class="footerBrand">
+
+        <img
+            src="../Assets/Logos/Main Logo without BG.png"
+            alt="Pinnacle Packaging">
+
+
+        <div>
+
+            <strong>
+                PINNACLE PACKAGING
+            </strong>
+
+            <span>
+                (PVT) LTD
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="footerCopyright">
+
+        © 2026 Pinnacle Packaging (Pvt) Ltd
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     BACK TO TOP
+     ===================================================== -->
+
+<button
+    id="topButton"
+    class="topButton"
+    type="button"
+    aria-label="Back to top">
+
+    ↑
+
+</button>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="products_script.js"></script>
+
+
+</body>
+
+</html>
