@@ -1,14 +1,14 @@
 /* =========================================================
    PINNACLE PACKAGING
    PRODUCTS PAGE SCRIPT
-========================================================= */
+   ========================================================= */
 
 "use strict";
 
 
 /* =========================================================
    GLOBAL VARIABLES
-========================================================= */
+   ========================================================= */
 
 let products = [];
 
@@ -19,7 +19,7 @@ let currentProduct = null;
 
 /* =========================================================
    DOM ELEMENTS
-========================================================= */
+   ========================================================= */
 
 const productGrid =
     document.getElementById("productGrid");
@@ -78,7 +78,7 @@ const heroBackground =
 
 /* =========================================================
    BACKGROUND SLIDER
-========================================================= */
+   ========================================================= */
 
 const backgroundImages = [
 
@@ -100,7 +100,6 @@ function changeBackground() {
     if (!heroBackground) return;
 
     heroBackground.style.opacity = "0";
-
 
     setTimeout(() => {
 
@@ -125,7 +124,7 @@ setInterval(changeBackground, 5500);
 
 /* =========================================================
    LOAD PRODUCT JSON
-========================================================= */
+   ========================================================= */
 
 async function loadProducts() {
 
@@ -133,6 +132,7 @@ async function loadProducts() {
 
         const response =
             await fetch("products.json");
+
 
         if (!response.ok) {
 
@@ -142,11 +142,14 @@ async function loadProducts() {
 
         }
 
+
         products =
             await response.json();
 
+
         currentProducts =
             [...products];
+
 
         displayProducts(currentProducts);
 
@@ -158,6 +161,7 @@ async function loadProducts() {
             "Unable to load products.json:",
             error
         );
+
 
         productGrid.innerHTML = `
 
@@ -183,14 +187,16 @@ async function loadProducts() {
 
 /* =========================================================
    CREATE PRODUCT CARD
-========================================================= */
+   ========================================================= */
 
 function createProductCard(product, index) {
 
     const card =
         document.createElement("article");
 
-    card.className = "productCard";
+
+    card.className =
+        "productCard";
 
 
     const features =
@@ -210,8 +216,11 @@ function createProductCard(product, index) {
         <div class="productImage">
 
             <span class="productBadge">
+
                 ${escapeHTML(product.category)}
+
             </span>
+
 
             <img
                 src="${escapeAttribute(product.image)}"
@@ -251,7 +260,9 @@ function createProductCard(product, index) {
                 ${features.map(feature => `
 
                     <li>
+
                         ${escapeHTML(feature)}
+
                     </li>
 
                 `).join("")}
@@ -264,7 +275,9 @@ function createProductCard(product, index) {
                 ${tags.map(tag => `
 
                     <span>
+
                         ${escapeHTML(tag)}
+
                     </span>
 
                 `).join("")}
@@ -301,19 +314,35 @@ function createProductCard(product, index) {
     const viewButton =
         card.querySelector(".viewButton");
 
+
     const inquiryButton =
         card.querySelector(".inquiryButton");
 
 
+    /* =====================================================
+       VIEW DETAILS BUTTON
+       ===================================================== */
+
     viewButton.addEventListener(
+
         "click",
+
         () => openProductModal(product)
+
     );
 
 
+    /* =====================================================
+       INQUIRY BUTTON
+       FIXED
+       ===================================================== */
+
     inquiryButton.addEventListener(
+
         "click",
-        () => sendInquiry(product)
+
+        () => openInquiry(product.name)
+
     );
 
 
@@ -331,11 +360,12 @@ function createProductCard(product, index) {
 
 /* =========================================================
    DISPLAY PRODUCTS
-========================================================= */
+   ========================================================= */
 
 function displayProducts(productArray) {
 
     productGrid.innerHTML = "";
+
 
     currentProducts =
         [...productArray];
@@ -354,6 +384,7 @@ function displayProducts(productArray) {
 
 
     productArray.forEach(
+
         (product, index) => {
 
             const card =
@@ -362,9 +393,11 @@ function displayProducts(productArray) {
                     index
                 );
 
+
             productGrid.appendChild(card);
 
         }
+
     );
 
 }
@@ -372,7 +405,7 @@ function displayProducts(productArray) {
 
 /* =========================================================
    SEARCH
-========================================================= */
+   ========================================================= */
 
 function searchProducts() {
 
@@ -431,12 +464,14 @@ function searchProducts() {
             ]
 
             .join(" ")
+
             .toLowerCase();
 
 
             return (
 
                 matchesCategory &&
+
                 searchableText.includes(query)
 
             );
@@ -450,26 +485,33 @@ function searchProducts() {
 
 
 searchInput.addEventListener(
+
     "input",
+
     searchProducts
+
 );
 
 
 /* =========================================================
    CLEAR SEARCH
-========================================================= */
+   ========================================================= */
 
 function updateClearButton() {
 
     if (searchInput.value.trim()) {
 
-        clearSearch.classList.add("visible");
+        clearSearch.classList.add(
+            "visible"
+        );
 
     }
 
     else {
 
-        clearSearch.classList.remove("visible");
+        clearSearch.classList.remove(
+            "visible"
+        );
 
     }
 
@@ -477,7 +519,9 @@ function updateClearButton() {
 
 
 clearSearch.addEventListener(
+
     "click",
+
     () => {
 
         searchInput.value = "";
@@ -487,31 +531,41 @@ clearSearch.addEventListener(
         searchInput.focus();
 
     }
+
 );
 
 
 /* =========================================================
    CATEGORY FILTER
-========================================================= */
+   ========================================================= */
 
 filterButtons.forEach(button => {
 
     button.addEventListener(
+
         "click",
+
         () => {
 
             filterButtons.forEach(
+
                 item =>
-                    item.classList.remove("active")
+                    item.classList.remove(
+                        "active"
+                    )
+
             );
 
 
-            button.classList.add("active");
+            button.classList.add(
+                "active"
+            );
 
 
             searchProducts();
 
         }
+
     );
 
 });
@@ -519,44 +573,58 @@ filterButtons.forEach(button => {
 
 /* =========================================================
    RESET FILTERS
-========================================================= */
+   ========================================================= */
 
 resetFilters.addEventListener(
+
     "click",
+
     () => {
 
         searchInput.value = "";
 
+
         filterButtons.forEach(
+
             button =>
-                button.classList.remove("active")
+                button.classList.remove(
+                    "active"
+                )
+
         );
 
 
         document
+
             .querySelector(
                 '[data-filter="all"]'
             )
-            .classList.add("active");
+
+            .classList.add(
+                "active"
+            );
 
 
         searchProducts();
 
     }
+
 );
 
 
 /* =========================================================
    PRODUCT MODAL
-========================================================= */
+   ========================================================= */
 
 function openProductModal(product) {
 
-    currentProduct = product;
+    currentProduct =
+        product;
 
 
     modalImage.src =
         product.image;
+
 
     modalImage.alt =
         product.name;
@@ -578,13 +646,16 @@ function openProductModal(product) {
 
 
     (product.applications || [])
+
         .forEach(application => {
 
             const li =
                 document.createElement("li");
 
+
             li.textContent =
                 application;
+
 
             modalApplications.appendChild(li);
 
@@ -595,20 +666,26 @@ function openProductModal(product) {
 
 
     (product.features || [])
+
         .forEach(feature => {
 
             const li =
                 document.createElement("li");
 
+
             li.textContent =
                 feature;
+
 
             modalFeatures.appendChild(li);
 
         });
 
 
-    productModal.classList.add("active");
+    productModal.classList.add(
+        "active"
+    );
+
 
     productModal.setAttribute(
         "aria-hidden",
@@ -624,7 +701,7 @@ function openProductModal(product) {
 
 /* =========================================================
    CLOSE MODAL
-========================================================= */
+   ========================================================= */
 
 function closeProductModal() {
 
@@ -632,27 +709,36 @@ function closeProductModal() {
         "active"
     );
 
+
     productModal.setAttribute(
         "aria-hidden",
         "true"
     );
 
+
     document.body.style.overflow =
         "";
 
-    currentProduct = null;
+
+    currentProduct =
+        null;
 
 }
 
 
 closeModalButton.addEventListener(
+
     "click",
+
     closeProductModal
+
 );
 
 
 productModal.addEventListener(
+
     "click",
+
     event => {
 
         if (
@@ -665,16 +751,24 @@ productModal.addEventListener(
         }
 
     }
+
 );
 
 
 document.addEventListener(
+
     "keydown",
+
     event => {
 
         if (
+
             event.key === "Escape" &&
-            productModal.classList.contains("active")
+
+            productModal.classList.contains(
+                "active"
+            )
+
         ) {
 
             closeProductModal();
@@ -682,18 +776,23 @@ document.addEventListener(
         }
 
     }
+
 );
 
 
 /* =========================================================
    EMAIL INQUIRY
-========================================================= */
+   ========================================================= */
 
 function openInquiry(productName) {
 
-    const recipient = "shenaldinaru99@gmail.com";
+    const recipient =
+        "shenaldinaru99@gmail.com";
 
-    const subject = `Product Inquiry - ${productName}`;
+
+    const subject =
+        `Product Inquiry - ${productName}`;
+
 
     const body = `Dear Pinnacle Packaging,
 
@@ -714,38 +813,59 @@ Best regards,
 
 From Web`;
 
+
     const mailtoLink =
+
         `mailto:${recipient}` +
+
         `?subject=${encodeURIComponent(subject)}` +
+
         `&body=${encodeURIComponent(body)}`;
 
-    window.location.href = mailtoLink;
+
+    /*
+     * Opens the user's default email application.
+     * It does NOT force Gmail or Chrome.
+     */
+
+    window.location.href =
+        mailtoLink;
+
 }
+
 
 /* =========================================================
    MODAL INQUIRY BUTTON
-========================================================= */
+   FIXED
+   ========================================================= */
 
 modalInquiry.addEventListener(
+
     "click",
+
     () => {
 
         if (currentProduct) {
 
-            sendInquiry(currentProduct);
+            openInquiry(
+                currentProduct.name
+            );
 
         }
 
     }
+
 );
 
 
 /* =========================================================
    HEADER SCROLL EFFECT
-========================================================= */
+   ========================================================= */
 
 window.addEventListener(
+
     "scroll",
+
     () => {
 
         if (window.scrollY > 80) {
@@ -782,15 +902,18 @@ window.addEventListener(
         }
 
     }
+
 );
 
 
 /* =========================================================
    BACK TO TOP
-========================================================= */
+   ========================================================= */
 
 topButton.addEventListener(
+
     "click",
+
     () => {
 
         window.scrollTo({
@@ -802,21 +925,26 @@ topButton.addEventListener(
         });
 
     }
+
 );
 
 
 /* =========================================================
    SMOOTH ANCHOR SCROLL
-========================================================= */
+   ========================================================= */
 
 document
+
     .querySelectorAll(
         'a[href^="#"]'
     )
+
     .forEach(anchor => {
 
         anchor.addEventListener(
+
             "click",
+
             function(event) {
 
                 const target =
@@ -838,6 +966,7 @@ document
                 });
 
             }
+
         );
 
     });
@@ -845,16 +974,36 @@ document
 
 /* =========================================================
    SECURITY / HTML ESCAPING
-========================================================= */
+   ========================================================= */
 
 function escapeHTML(value) {
 
     return String(value)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
@@ -868,6 +1017,6 @@ function escapeAttribute(value) {
 
 /* =========================================================
    INITIALIZE
-========================================================= */
+   ========================================================= */
 
 loadProducts();
