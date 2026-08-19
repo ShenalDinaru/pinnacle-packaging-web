@@ -1,14 +1,9 @@
-/* =========================================================
-   PINNACLE PACKAGING
-   PRODUCTS PAGE SCRIPT
-   ========================================================= */
+/* js */
 
 "use strict";
 
 
-/* =========================================================
-   GLOBAL VARIABLES
-   ========================================================= */
+/* GLOBAL VARIABLES*/
 
 let products = [];
 
@@ -17,9 +12,7 @@ let currentProducts = [];
 let currentProduct = null;
 
 
-/* =========================================================
-   DOM ELEMENTS
-   ========================================================= */
+/* DOM ELEMENTS */
 
 const productGrid =
     document.getElementById("productGrid");
@@ -76,9 +69,7 @@ const heroBackground =
     document.querySelector(".productsHeroBackground");
 
 
-/* =========================================================
-   BACKGROUND SLIDER
-   ========================================================= */
+/* BACKGROUND SLIDER */
 
 const backgroundImages = [
 
@@ -122,9 +113,7 @@ changeBackground();
 setInterval(changeBackground, 5500);
 
 
-/* =========================================================
-   LOAD PRODUCT JSON
-   ========================================================= */
+/* LOAD PRODUCT JSON */
 
 async function loadProducts() {
 
@@ -185,9 +174,7 @@ async function loadProducts() {
 }
 
 
-/* =========================================================
-   CREATE PRODUCT CARD
-   ========================================================= */
+/* CREATE PRODUCT CARD */
 
 function createProductCard(product, index) {
 
@@ -319,9 +306,7 @@ function createProductCard(product, index) {
         card.querySelector(".inquiryButton");
 
 
-    /* =====================================================
-       VIEW DETAILS BUTTON
-       ===================================================== */
+    /* VIEW DETAILS BUTTON*/
 
     viewButton.addEventListener(
 
@@ -332,10 +317,7 @@ function createProductCard(product, index) {
     );
 
 
-    /* =====================================================
-       INQUIRY BUTTON
-       FIXED
-       ===================================================== */
+    /* INQUIRY BUTTON */
 
     inquiryButton.addEventListener(
 
@@ -358,9 +340,7 @@ function createProductCard(product, index) {
 }
 
 
-/* =========================================================
-   DISPLAY PRODUCTS
-   ========================================================= */
+/* DISPLAY PRODUCTS */
 
 function displayProducts(productArray) {
 
@@ -403,9 +383,7 @@ function displayProducts(productArray) {
 }
 
 
-/* =========================================================
-   SEARCH
-   ========================================================= */
+/* SEARCH */
 
 function searchProducts() {
 
@@ -493,9 +471,7 @@ searchInput.addEventListener(
 );
 
 
-/* =========================================================
-   CLEAR SEARCH
-   ========================================================= */
+/* CLEAR SEARCH */
 
 function updateClearButton() {
 
@@ -535,9 +511,7 @@ clearSearch.addEventListener(
 );
 
 
-/* =========================================================
-   CATEGORY FILTER
-   ========================================================= */
+/* CATEGORY FILTER */
 
 filterButtons.forEach(button => {
 
@@ -571,9 +545,7 @@ filterButtons.forEach(button => {
 });
 
 
-/* =========================================================
-   RESET FILTERS
-   ========================================================= */
+/* RESET FILTERS */
 
 resetFilters.addEventListener(
 
@@ -612,9 +584,7 @@ resetFilters.addEventListener(
 );
 
 
-/* =========================================================
-   PRODUCT MODAL
-   ========================================================= */
+/* RODUCT MODAL */
 
 function openProductModal(product) {
 
@@ -699,9 +669,7 @@ function openProductModal(product) {
 }
 
 
-/* =========================================================
-   CLOSE MODAL
-   ========================================================= */
+/* CLOSE MODAL */
 
 function closeProductModal() {
 
@@ -780,14 +748,12 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   EMAIL INQUIRY
-   ========================================================= */
+/* EMAIL INQUIRY */
 
 function openInquiry(productName) {
 
     const recipient =
-        "shenaldinaru99@gmail.com";
+        "jude.pppl@gmail.com";
 
 
     const subject =
@@ -823,10 +789,7 @@ From Web`;
         `&body=${encodeURIComponent(body)}`;
 
 
-    /*
-     * Opens the user's default email application.
-     * It does NOT force Gmail or Chrome.
-     */
+    /* Opens the user's default email application /It does NOT force Gmail or Chrome.*/
 
     window.location.href =
         mailtoLink;
@@ -834,10 +797,7 @@ From Web`;
 }
 
 
-/* =========================================================
-   MODAL INQUIRY BUTTON
-   FIXED
-   ========================================================= */
+/* MODAL INQUIRY BUTTON*/
 
 modalInquiry.addEventListener(
 
@@ -858,9 +818,7 @@ modalInquiry.addEventListener(
 );
 
 
-/* =========================================================
-   HEADER SCROLL EFFECT
-   ========================================================= */
+/* HEADER SCROLL EFFECT*/
 
 window.addEventListener(
 
@@ -906,9 +864,7 @@ window.addEventListener(
 );
 
 
-/* =========================================================
-   BACK TO TOP
-   ========================================================= */
+/* BACK TO TOP */
 
 topButton.addEventListener(
 
@@ -929,9 +885,7 @@ topButton.addEventListener(
 );
 
 
-/* =========================================================
-   SMOOTH ANCHOR SCROLL
-   ========================================================= */
+/* SMOOTH ANCHOR SCROLL */
 
 document
 
@@ -972,9 +926,7 @@ document
     });
 
 
-/* =========================================================
-   SECURITY / HTML ESCAPING
-   ========================================================= */
+/* SECURITY / HTML ESCAPING*/
 
 function escapeHTML(value) {
 
@@ -1015,8 +967,6 @@ function escapeAttribute(value) {
 }
 
 
-/* =========================================================
-   INITIALIZE
-   ========================================================= */
+/* INITIALIZE */
 
 loadProducts();
