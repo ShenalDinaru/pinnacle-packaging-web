@@ -60,7 +60,7 @@
     {
         "name": "Kraft Paper Water Activated Tape",
         "category": "Eco Packaging",
-        "filter": "packing",
+        "filter": "eco packing",
         "image": "../Assets/Product Pics/Kraft pp water.png",
         "shortDescription": "Recyclable water-activated kraft paper tape for general, export and heavy-duty carton packaging.",
         "description": "Water Based Acrylic Kraft Paper Tape is a general-purpose packaging tape used for carton sealing. The gummed tape is activated by water and is described as 100% recyclable, environmentally friendly, with very good adhesion and strong tensile strength. It can also be printed for advertising purposes.",
@@ -168,6 +168,35 @@
         "tags": [
             "Double Side",
             "Tissue",
+            "Adhesive",
+            "Bonding"
+        ]
+    },
+
+    {
+        "name": "Double Side Form Tape",
+        "category": "Specialty Tape",
+        "filter": "specialty",
+        "image": "../Assets/Product Pics/double form.png",
+        "shortDescription": "Double-sided foam tape for cushioning and strong discreet bonds.",
+        "description": "Double Side Form Tape features pressure-sensitive adhesive on both sides of a foam carrier, providing cushioning, gap-filling and strong bonding between surfaces. Ideal for mounting, assembly and general-purpose bonding where a discrete finish is required.",
+        "applications": [
+            "Mounting signs and nameplates",
+            "Cushioning and shock absorption",
+            "Automotive trims and panels",
+            "General assembly",
+            "Display and POS fixtures"
+        ],
+        "features": [
+            "Adhesive on both sides",
+            "Foam carrier for gap filling",
+            "Good shear strength",
+            "Concealed final bond",
+            "Easy to die-cut and handle"
+        ],
+        "tags": [
+            "Double Side",
+            "Foam",
             "Adhesive",
             "Bonding"
         ]
@@ -319,4 +348,65 @@
             "Packaging"
         ]
     }
+,
+    
+
+    {
+        "name": "Paper Roll",
+        "category": "Eco Packaging",
+        "filter": "eco packing",
+        "image": "../Assets/Product Pics/paper roll.png",
+        "shortDescription": "Recyclable paper roll for wrapping, cushioning and packaging.",
+        "description": "Paper Roll is a versatile, recyclable packaging paper supplied in jumbo rolls for manual or machine use. It is suitable for wrapping, void fill, interleaving and protective wrapping for eco-conscious packaging operations.",
+        "applications": [
+            "Product wrapping",
+            "Void fill and cushioning",
+            "Interleaving between layers",
+            "Gift and retail packaging",
+            "Machine feed for wrapping lines"
+        ],
+        "features": [
+            "100% recyclable",
+            "Compostable in industrial facilities",
+            "Good tear resistance",
+            "Available in multiple weights",
+            "Suitable for manual and machine use"
+        ],
+        "tags": [
+            "Paper",
+            "Roll",
+            "Eco",
+            "Recyclable"
+        ]
+    },
+
+    {
+        "name": "Lids",
+        "category": "Eco Packaging",
+        "filter": "eco packing",
+        "image": "../Assets/Product Pics/lids.png",
+        "shortDescription": "Biodegradable lids for cups, containers and eco-friendly packaging needs.",
+        "description": "Lids are produced from biodegradable or compostable materials designed to complement sustainable packaging ranges. They offer reclosable protection and leak resistance for foodservice and retail applications while minimising environmental impact.",
+        "applications": [
+            "Foodservice containers",
+            "Takeaway cups",
+            "Retail food packaging",
+            "Disposable container sealing",
+            "Eco-friendly packaging solutions"
+        ],
+        "features": [
+            "Biodegradable or compostable materials",
+            "Secure fit",
+            "Heat and grease resistant options",
+            "Available in multiple sizes",
+            "Designed for reduced environmental impact"
+        ],
+        "tags": [
+            "Lids",
+            "Eco",
+            "Biodegradable",
+            "Foodservice"
+        ]
+    }
 ]
+
