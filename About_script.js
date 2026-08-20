@@ -6,8 +6,8 @@ const background = document.querySelector(".background");
 const images = [
     "Assets/Backgrounds/bg2.jpg",
     "Assets/Backgrounds/bg3.jpg",
-    "Assets/Backgrounds/bg4.jpg",
-    "Assets/Backgrounds/bg5.jpg"
+    "Assets/Backgrounds/bg6.jpg",
+    "Assets/Backgrounds/bg8.jpg"
 ];
 
 let current = 0;
