@@ -12,18 +12,25 @@
 */
 
 
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_PUBLIC_KEY = "Hs9YXZBD2kT4ExQEq";
 
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_SERVICE_ID = "service_v1uqlwi";
 
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_TEMPLATE_ID = "template_bw46axg";
+
+const isEmailJsConfigured =
+    EMAILJS_PUBLIC_KEY !== "YOUR_PUBLIC_KEY" &&
+    EMAILJS_SERVICE_ID !== "service_vzgo8y6" &&
+    EMAILJS_TEMPLATE_ID !== "YOUR_TEMPLATE_ID";
 
 
 /* Initialize EmailJS */
 
-emailjs.init({
-    publicKey: EMAILJS_PUBLIC_KEY
-});
+if (typeof emailjs !== "undefined" && isEmailJsConfigured) {
+    emailjs.init({
+        publicKey: EMAILJS_PUBLIC_KEY
+    });
+}
 
 
 /* =========================================
@@ -39,8 +46,22 @@ const submitButton =
 const formStatus =
     document.getElementById("formStatus");
 
+if (!contactForm) {
+    console.error("Contact form not found on this page.");
+} else if (!isEmailJsConfigured) {
+    console.warn("EmailJS is not configured. Add your public key, service ID, and template ID.");
 
-contactForm.addEventListener("submit", function (event) {
+    if (formStatus) {
+        formStatus.className = "error";
+        formStatus.textContent =
+            "The form is not configured yet. Please add your EmailJS credentials before sending messages.";
+    }
+
+    if (submitButton) {
+        submitButton.disabled = true;
+    }
+} else {
+    contactForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -109,4 +130,5 @@ contactForm.addEventListener("submit", function (event) {
 
     });
 
-});
+    });
+}
