@@ -1,0 +1,584 @@
+
+:root{
+    --primary:#148C86;
+    --deep:#0B5F5B;
+    --dark:#2F3033;
+    --white:#F7F8F8;
+    --glass:rgba(255,255,255,.08);
+}
+
+/* ABOUT PAGE OVERRIDES*/
+
+html,
+body{
+    height:auto !important;
+    min-height:100%;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+}
+
+body{
+    display:block !important;
+}
+
+.aboutHero{
+    position:relative;
+    height:100vh;
+    width:100%;
+}
+
+.companySection,
+.timelineSection,
+.missionSection,
+.whySection,
+.qualitySection,
+.aboutStats,
+.ctaSection,
+footer{
+    position:relative;
+    display:block;
+    width:100%;
+    z-index:2;
+}
+
+section{
+    width:100%;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/*HERO SECTION*/
+
+.aboutHero{
+    position:relative;
+    min-height:80vh;
+    overflow:hidden;
+}
+
+.aboutHero .background{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    animation:zoom 12s infinite alternate;
+    transition:opacity 1.5s ease;
+    z-index:0;
+}
+
+.aboutHero .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(16,22,22,.88),
+        rgba(11,95,91,.25)
+    );
+    z-index:1;
+}
+
+.heroContent{
+    position:relative;
+    z-index:5;
+    width:min(720px,90%);
+    padding:170px 7vw 120px;
+}
+
+.sectionTitle{
+    display:inline-block;
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:4px;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.heroContent h1{
+    font-size:clamp(44px,6vw,78px);
+    line-height:.95;
+    letter-spacing:3px;
+    font-weight:900;
+    margin-bottom:30px;
+}
+
+.heroContent p{
+    font-size:16px;
+    line-height:1.9;
+    color:rgba(255,255,255,.82);
+    max-width:650px;
+    margin-bottom:40px;
+}
+
+.heroContent .discover{
+    padding:16px 36px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:30px;
+}
+
+.heroContent .discover .downArrow{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    margin-left:12px;
+    border-right:2px solid #fff;
+    border-bottom:2px solid #fff;
+    transform:rotate(45deg);
+}
+
+.heroContent .discover:hover .downArrow{
+    transform:rotate(45deg) translateY(2px);
+}
+
+/*COMPANY SECTION*/
+
+.companySection{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+    padding:100px 8%;
+    background:#202326;
+}
+
+.companyImage{
+    position:relative;
+}
+
+.companyImage img{
+    width:100%;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+.companyContent{
+    display:flex;
+    flex-direction:column;
+}
+
+.smallHeading{
+    color:var(--primary);
+    letter-spacing:3px;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.companyContent h2{
+    font-size:42px;
+    margin-bottom:30px;
+    line-height:1.2;
+}
+
+.companyContent p{
+    font-size:15px;
+    line-height:2;
+    color:rgba(255,255,255,.82);
+    margin-bottom:22px;
+}
+
+/*TIMELINE */
+
+.timelineSection{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    padding:100px 8%;
+    background:#18191b;
+}
+
+.timelineCard{
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:40px 35px;
+    backdrop-filter:blur(18px);
+    transition:.35s;
+}
+
+.timelineCard:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 20px 45px rgba(20,140,134,.18);
+}
+
+.timelineCard h2{
+    color:var(--primary);
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.timelineCard h3{
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.timelineCard p{
+    line-height:1.9;
+    color:rgba(255,255,255,.8);
+}
+
+/*MISSION / VISION*/
+
+.missionSection{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:40px;
+    padding:100px 8%;
+    background:#202326;
+}
+
+.missionCard{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:45px;
+    backdrop-filter:blur(15px);
+    transition:.35s;
+}
+
+.missionCard:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 20px 45px rgba(20,140,134,.18);
+}
+
+.missionCard h2{
+    color:var(--primary);
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.missionCard p{
+    line-height:2;
+    font-size:15px;
+    color:rgba(255,255,255,.82);
+}
+
+/*WHY CHOOSE US*/
+
+.whySection{
+    padding:100px 8%;
+    background:#18191b;
+}
+
+.sectionHeading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.sectionHeading span{
+    color:var(--primary);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.sectionHeading h2{
+    margin-top:15px;
+    font-size:42px;
+    font-weight:800;
+}
+
+.whyGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.whyCard{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:40px 30px;
+    transition:.35s ease;
+    backdrop-filter:blur(15px);
+}
+
+.whyCard:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    background:rgba(20,140,134,.12);
+    box-shadow:0 20px 40px rgba(20,140,134,.15);
+}
+
+.whyCard h3{
+    color:var(--primary);
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.whyCard p{
+    line-height:1.9;
+    color:rgba(255,255,255,.82);
+    font-size:15px;
+}
+
+/*QUALITY SECTION*/
+
+.qualitySection{
+    background:#202326;
+    padding:100px 8%;
+}
+
+.qualityContent{
+    max-width:900px;
+    margin:auto;
+}
+
+.qualityContent span{
+    color:var(--primary);
+    letter-spacing:3px;
+    font-weight:700;
+    font-size:14px;
+}
+
+.qualityContent h2{
+    margin:20px 0 30px;
+    font-size:42px;
+}
+
+.qualityContent p{
+    font-size:16px;
+    line-height:2;
+    color:rgba(255,255,255,.82);
+    margin-bottom:35px;
+}
+
+.qualityContent ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.qualityContent li{
+    position:relative;
+    padding-left:38px;
+    margin-bottom:22px;
+    line-height:1.8;
+    font-size:15px;
+    color:rgba(255,255,255,.85);
+}
+
+.qualityContent li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    top:0;
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/*STATISTICS*/
+
+.aboutStats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+    text-align:center;
+    padding:100px 8%;
+    background:#18191b;
+}
+
+.aboutStats div{
+    padding:35px 20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.04);
+    transition:.35s;
+}
+
+.aboutStats div:hover{
+    transform:translateY(-8px);
+    background:rgba(20,140,134,.08);
+}
+
+.aboutStats h2{
+    color:var(--primary);
+    font-size:58px;
+    margin-bottom:12px;
+    font-weight:800;
+}
+
+.aboutStats span{
+    font-size:15px;
+    color:rgba(255,255,255,.75);
+    letter-spacing:1px;
+}
+
+/*CTA*/
+
+.ctaSection{
+    text-align:center;
+    padding:110px 8%;
+    background:linear-gradient(
+        135deg,
+        #0b5f5b,
+        #148c86
+    );
+}
+
+.ctaSection h2{
+    font-size:44px;
+    margin-bottom:20px;
+}
+
+.ctaSection p{
+    max-width:700px;
+    margin:0 auto 45px;
+    line-height:1.9;
+    color:rgba(255,255,255,.9);
+}
+
+.ctaSection .discover{
+    background:#fff;
+    color:var(--deep);
+    font-weight:700;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 36px;
+    border-radius:30px;
+}
+
+.ctaSection .discover:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 35px rgba(0,0,0,.25);
+}
+
+/*FOOTER*/
+
+footer{
+    background:#111315;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer img{
+    width:48px;
+}
+
+footer div{
+    color:rgba(255,255,255,.7);
+    font-size:14px;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media(max-width:1200px){
+
+    .companySection{
+        gap:45px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .companySection{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .companyImage{
+        order:-1;
+    }
+
+    .companyImage img{
+        margin:auto;
+        max-width:650px;
+    }
+
+    .companyContent{
+        align-items:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .heroContent{
+        padding:140px 30px 80px;
+    }
+
+    .heroContent h1{
+        font-size:48px;
+    }
+
+    .companySection,
+    .timelineSection,
+    .missionSection,
+    .whySection,
+    .qualitySection,
+    .aboutStats,
+    .ctaSection{
+        padding:80px 30px;
+    }
+
+    .sectionHeading h2,
+    .qualityContent h2,
+    .ctaSection h2{
+        font-size:34px;
+    }
+
+    .missionCard,
+    .timelineCard,
+    .whyCard{
+        padding:35px 25px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .heroContent h1{
+        font-size:38px;
+    }
+
+    .heroContent p{
+        font-size:15px;
+    }
+
+    .companyContent h2{
+        font-size:32px;
+    }
+
+    .timelineCard h2,
+    .aboutStats h2{
+        font-size:42px;
+    }
+
+    .sectionHeading h2,
+    .qualityContent h2,
+    .ctaSection h2{
+        font-size:28px;
+    }
+
+    .ctaSection .discover{
+        width:100%;
+    }
+
+    footer{
+        justify-content:center;
+        text-align:center;
+    }
+
+}
