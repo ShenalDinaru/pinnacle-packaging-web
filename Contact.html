@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pinnacle Packaging | Contact</title>
+
+    <link rel="icon" type="image/png"
+        href="../Assets/Logos/Main Logo without BG.png">
+
+    <link rel="stylesheet" href="./Contact_Styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <div class="contact-page">
+
+        <!-- Background -->
+        <div class="background"></div>
+        <div class="overlay"></div>
+
+
+        <!-- HEADER -->
+        <header>
+
+            <div class="brand">
+
+                <img
+                    class="brand-logo"
+                    src="../Assets/Logos/Main Logo without BG.png"
+                    alt="Pinnacle Packaging Logo">
+
+                <span>PINNACLE PACKAGING (PVT) LTD</span>
+
+            </div>
+
+
+            <nav>
+
+                <a href="../index.html">HOME</a>
+
+                <a href="about.html">ABOUT</a>
+
+                <a href="products.html">PRODUCTS</a>
+
+                <a href="contact.html" class="active">CONTACT</a>
+
+            </nav>
+
+        </header>
+
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- INTRO -->
+            <section class="intro">
+
+                <span class="small-title">
+                    CONTACT PINNACLE
+                </span>
+
+                <h1>
+                    LET'S BUILD<br>
+                    <span>BETTER</span> TOGETHER.
+                </h1>
+
+                <p>
+                    Whether you have an inquiry, need a quotation,
+                    or simply want to learn more about our packaging
+                    solutions, our team is ready to assist you.
+                </p>
+
+            </section>
+
+
+            <!-- MESSAGE SECTION -->
+            <section class="message-section">
+
+                <div class="section-heading">
+
+                    <span>01 — SEND US A MESSAGE</span>
+
+                    <h2>
+                        HAVE AN <strong>INQUIRY?</strong>
+                    </h2>
+
+                    <p>
+                        Tell us what you need and our team will get
+                        back to you as soon as possible.
+                    </p>
+
+                </div>
+
+
+                <form id="contactForm">
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label for="name">
+                                YOUR NAME
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="email">
+                                EMAIL ADDRESS
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label for="phone">
+                                PHONE NUMBER
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number">
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="subject">
+                                SUBJECT
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required>
+
+                                <option value="" disabled selected>
+                                    Select an inquiry type
+                                </option>
+
+                                <option value="General Inquiry">
+                                    General Inquiry
+                                </option>
+
+                                <option value="Product Inquiry">
+                                    Product Inquiry
+                                </option>
+
+                                <option value="Quotation Request">
+                                    Request a Quotation
+                                </option>
+
+                                <option value="Customer Support">
+                                    Customer Support
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="message">
+                            YOUR MESSAGE
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell us how we can help you..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <div class="form-bottom">
+
+                        <p>
+                            We respect your privacy and will only use
+                            your information to respond to your inquiry.
+                        </p>
+
+                        <button
+                            type="submit"
+                            id="submitButton">
+
+                            SEND MESSAGE
+                            <span>↗</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div id="formStatus"></div>
+
+                </form>
+
+            </section>
+
+
+            <!-- TEAM CONTACTS -->
+            <section class="team-section">
+
+                <div class="section-heading">
+
+                    <span>02 — CONTACT OUR TEAM</span>
+
+                    <h2>
+                        TALK TO THE <strong>RIGHT PERSON.</strong>
+                    </h2>
+
+                    <p>
+                        Get directly in touch with the member of our
+                        team best suited to assist you.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- GENERAL -->
+                    <div class="contact-card general">
+
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <span class="contact-role">
+                            GENERAL CONTACT
+                        </span>
+
+                        <h3>
+                            Pinnacle Packaging
+                        </h3>
+
+                        <p>
+                            For general inquiries, company information,
+                            partnerships and other business matters.
+                        </p>
+
+                        <a href="mailto:web.inqury.pinnaclepkg@gmail.com">
+                            web.inqury.pinnaclepkg@gmail.com
+                        </a>
+
+                        <a href="tel:+94117938800">
+                            +94 11 793 8800
+                        </a>
+
+                    </div>
+
+
+                    <!-- SALES -->
+                    <div class="contact-card">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <div class="contact-icon">
+                            ◇
+                        </div>
+
+                        <span class="contact-role">
+                            SALES & QUOTATIONS
+                        </span>
+
+                        <h3>
+                            Udana Fernando 
+                        </h3>
+
+                        <p>
+                            Speak with our sales team regarding products,
+                            pricing, quotations and bulk orders.
+                        </p>
+
+                        <a href="mailto:udana.pppl@gmail.com">
+                            udana.pppl@gmail.com
+                        </a>
+
+                        <a href="tel:+94112345679">
+                            +94 11 234 5679
+                        </a>
+
+                    </div>
+
+
+                    <!-- SUPPORT -->
+                    <div class="contact-card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <div class="contact-icon">
+                            +
+                        </div>
+
+                        <span class="contact-role">
+                            CUSTOMER INQUIRIES
+                        </span>
+
+                        <h3>
+                            Asitha Amarasinghe
+                        </h3>
+
+                        <p>
+                            Need assistance with an existing order,
+                            product or service? We're here to help.
+                        </p>
+
+                        <a href="mailto:jude.pppl@gmail.com">
+                            jude.pppl@gmail.com
+                        </a>
+
+                        <a href="tel:+94112345680">
+                            +94 77 360 0821
+                        </a>
+
+                    </div>
+
+
+                    <!-- MANAGEMENT -->
+                    <div class="contact-card">
+
+                        <div class="card-number">
+                            04
+                        </div>
+
+                        <div class="contact-icon">
+                            ↗
+                        </div>
+
+                        <span class="contact-role">
+                            MANAGEMENT
+                        </span>
+
+                        <h3>
+                            Shiran Weerasinghe
+                        </h3>
+
+                        <p>
+                            For strategic partnerships, corporate matters
+                            and management-level inquiries.
+                        </p>
+
+                        <a href="mailto:shiran.pppl@gmail.com">
+                            shiran.pppl@gmail.com
+                        </a>
+
+                        <a href="tel:+94112345681">
+                            +94 77 229 0847
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOCATION / CTA -->
+            <section class="bottom-section">
+
+                <div>
+
+                    <span>
+                        VISIT PINNACLE PACKAGING
+                    </span>
+
+                    <h2>
+                        LET'S TALK
+                        <strong>PACKAGING.</strong>
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="https://maps.app.goo.gl/ybQmW6uiwqWssfx77"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="location-button">
+
+                    LOCATE US
+                    <span>↗</span>
+
+                </a>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <div class="footer-brand">
+
+                <img
+                    src="../Assets/Logos/Main Logo without BG.png"
+                    alt="Pinnacle Logo">
+
+                <span>
+                    PINNACLE PACKAGING (PVT) LTD
+                </span>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <span>
+                    © 2026 Pinnacle Packaging
+                </span>
+
+                <a href="../index.html">
+                    BACK TO HOME ↑
+                </a>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <script src="./Contact_Script.js"></script>
+
+</body>
+
+</html>
