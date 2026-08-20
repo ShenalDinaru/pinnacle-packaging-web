@@ -1,4 +1,4 @@
-/* EMAILJS CONFIGURATION */
+
 
 const EMAILJS_PUBLIC_KEY = "Hs9YXZBD2kT4ExQEq";
 
@@ -21,7 +21,7 @@ if (typeof emailjs !== "undefined" && isEmailJsConfigured) {
 }
 
 
-/* CONTACT FORM */
+
 
 const contactForm =
     document.getElementById("contactForm");
