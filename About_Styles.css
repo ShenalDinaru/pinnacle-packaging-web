@@ -118,6 +118,19 @@ img{
     align-items:center;
     justify-content:center;
     border-radius:30px;
+    background:linear-gradient(135deg, var(--primary), var(--deep));
+    color:#fff;
+    font-weight:700;
+    letter-spacing:1.5px;
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 12px 30px rgba(20,140,134,.35);
+    transition:transform .3s ease, box-shadow .3s ease, filter .3s ease;
+}
+
+.heroContent .discover:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 35px rgba(20,140,134,.45);
+    filter:brightness(1.05);
 }
 
 .heroContent .discover .downArrow{
@@ -128,6 +141,7 @@ img{
     border-right:2px solid #fff;
     border-bottom:2px solid #fff;
     transform:rotate(45deg);
+    transition:transform .2s ease;
 }
 
 .heroContent .discover:hover .downArrow{
