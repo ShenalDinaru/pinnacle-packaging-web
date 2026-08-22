@@ -127,6 +127,39 @@ buttons.forEach((button) => {
 });
 
 
+/*CERTIFICATE SLIDER*/
+
+const sliderTrack = document.querySelector(".sliderTrack");
+const slides = document.querySelectorAll(".certSlide");
+const prevButton = document.querySelector(".sliderArrow.prev");
+const nextButton = document.querySelector(".sliderArrow.next");
+
+if (sliderTrack && slides.length > 0) {
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+
+        currentSlide = (index + slides.length) % slides.length;
+        sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    }
+
+    prevButton?.addEventListener("click", () => {
+        showSlide(currentSlide - 1);
+    });
+
+    nextButton?.addEventListener("click", () => {
+        showSlide(currentSlide + 1);
+    });
+
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+
+}
+
+
 /*PAGE LOADED*/
 
 window.addEventListener("load", () => {
