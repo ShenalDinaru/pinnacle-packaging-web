@@ -147,26 +147,33 @@ h1{
     margin-top:35px;
 }
 
-button{
+.watch-link,
+.discover-link{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     padding:14px 30px;
     border-radius:30px;
     cursor:pointer;
     font-size:12px;
     letter-spacing:2px;
     transition:.3s;
+    text-decoration:none;
+    font-family:'Montserrat',sans-serif;
+    font-weight:500;
 }
 
-.watch{
+.watch-link{
     background:transparent;
     color:white;
     border:1px solid var(--primary);
 }
 
-.watch:hover{ 
+.watch-link:hover{ 
     background:var(--primary);
 }
 
-.discover{
+.discover-link{
     border:none;
     color:white;
     background:
@@ -175,12 +182,11 @@ button{
         var(--primary),
         var(--deep)
 );
-
-box-shadow:
+    box-shadow:
     0 10px 30px rgba(20,140,134,.4);
 }
 
-.discover:hover{
+.discover-link:hover{
     transform:translateY(-4px);
 }
 
