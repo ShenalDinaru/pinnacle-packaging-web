@@ -454,6 +454,15 @@ img{
     align-items:center;
     padding:42px 42px 30px;
     background:rgba(255,255,255,.02);
+    cursor:pointer;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.certSlide:hover,
+.certSlide:focus-visible{
+    transform:translateY(-4px);
+    box-shadow:0 18px 32px rgba(0,0,0,.12);
+    outline:none;
 }
 
 .certImage{
@@ -533,6 +542,70 @@ img{
 .sliderArrow:hover{
     background:var(--primary);
     transform:translateY(-2px);
+}
+
+.pdfModal{
+    position:fixed;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:200;
+    padding:24px;
+}
+
+.pdfModal.show{
+    display:flex;
+}
+
+.pdfModalBackdrop{
+    position:absolute;
+    inset:0;
+    background:rgba(3, 8, 10, 0.8);
+}
+
+.pdfModalDialog{
+    position:relative;
+    width:min(1100px, 92vw);
+    height:min(88vh, 820px);
+    background:#0f1215;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 35px 90px rgba(0,0,0,.45);
+}
+
+.pdfClose{
+    position:absolute;
+    top:16px;
+    right:16px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+    z-index:2;
+}
+
+.pdfModalDialog h3{
+    position:absolute;
+    left:24px;
+    top:18px;
+    right:74px;
+    z-index:2;
+    margin:0;
+    font-size:18px;
+    color:#fff;
+}
+
+#pdfViewer{
+    width:100%;
+    height:100%;
+    background:#fff;
+    border:0;
 }
 
 @media (max-width: 768px) {

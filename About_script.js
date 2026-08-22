@@ -133,6 +133,10 @@ const sliderTrack = document.querySelector(".sliderTrack");
 const slides = document.querySelectorAll(".certSlide");
 const prevButton = document.querySelector(".sliderArrow.prev");
 const nextButton = document.querySelector(".sliderArrow.next");
+const certModal = document.getElementById("certModal");
+const pdfViewer = document.getElementById("pdfViewer");
+const certModalTitle = document.getElementById("certModalTitle");
+const modalCloseButton = document.querySelector(".pdfClose");
 
 if (sliderTrack && slides.length > 0) {
 
@@ -156,6 +160,59 @@ if (sliderTrack && slides.length > 0) {
     setInterval(() => {
         showSlide(currentSlide + 1);
     }, 5000);
+
+}
+
+if (certModal && pdfViewer) {
+
+    const closeModal = () => {
+        certModal.classList.remove("show");
+        certModal.setAttribute("aria-hidden", "true");
+        pdfViewer.src = "";
+    };
+
+    const openModal = (pdfUrl, title) => {
+
+        if (!pdfUrl) return;
+
+        pdfViewer.src = pdfUrl;
+        certModalTitle.textContent = title || "Certificate Preview";
+        certModal.classList.add("show");
+        certModal.setAttribute("aria-hidden", "false");
+
+    };
+
+    slides.forEach((slide) => {
+
+        const pdfUrl = slide.dataset.pdf;
+        const title = slide.dataset.title || slide.querySelector("h3")?.textContent || "Certificate";
+
+        slide.addEventListener("click", () => {
+            openModal(pdfUrl, title);
+        });
+
+        slide.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openModal(pdfUrl, title);
+            }
+        });
+
+    });
+
+    modalCloseButton?.addEventListener("click", closeModal);
+
+    certModal.addEventListener("click", (event) => {
+        if (event.target instanceof HTMLElement && event.target.dataset.close === "true") {
+            closeModal();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && certModal.classList.contains("show")) {
+            closeModal();
+        }
+    });
 
 }
 

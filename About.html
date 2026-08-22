@@ -391,7 +391,7 @@
 
                 <div class="sliderTrack">
 
-                    <article class="certSlide active">
+                    <article class="certSlide active" data-pdf="Assets/Certificates/iso-9001.pdf" data-title="ISO 9001:2015" tabindex="0" role="button" aria-label="Open ISO 9001 certificate">
 
                         <div class="certImage certIso">
                             <div class="certStamp">ISO</div>
@@ -404,7 +404,7 @@
 
                     </article>
 
-                    <article class="certSlide">
+                    <article class="certSlide" data-pdf="Assets/Certificates/iso-14001.pdf" data-title="ISO 14001" tabindex="0" role="button" aria-label="Open ISO 14001 certificate">
 
                         <div class="certImage certEnv">
                             <div class="certStamp">EMS</div>
@@ -417,7 +417,7 @@
 
                     </article>
 
-                    <article class="certSlide">
+                    <article class="certSlide" data-pdf="Assets/Certificates/brcgs-packaging.pdf" data-title="BRCGS Packaging" tabindex="0" role="button" aria-label="Open BRCGS certificate">
 
                         <div class="certImage certSafety">
                             <div class="certStamp">BRCGS</div>
@@ -430,7 +430,7 @@
 
                     </article>
 
-                    <article class="certSlide">
+                    <article class="certSlide" data-pdf="Assets/Certificates/fsc-certified.pdf" data-title="FSC Certified" tabindex="0" role="button" aria-label="Open FSC certificate">
 
                         <div class="certImage certFsc">
                             <div class="certStamp">FSC</div>
@@ -452,6 +452,22 @@
         </div>
 
     </section>
+
+    <div class="pdfModal" id="certModal" aria-hidden="true">
+
+        <div class="pdfModalBackdrop" data-close="true"></div>
+
+        <div class="pdfModalDialog" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+
+            <button class="pdfClose" type="button" aria-label="Close certificate preview">×</button>
+
+            <h3 id="certModalTitle">Certificate Preview</h3>
+
+            <iframe id="pdfViewer" title="Certificate preview" src="" frameborder="0"></iframe>
+
+        </div>
+
+    </div>
 
     <!-- CTA -->
 
