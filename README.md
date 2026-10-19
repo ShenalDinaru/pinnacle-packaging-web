@@ -1,74 +1,20 @@
-# pinnacle-packaging-web
-Official website for Pinnacle Packaging (Pvt) Ltd - packaging solutions, adhesive tapes and films.
-Pinackle Packaging PVT Ltd/
-│
-├── Product.html
-│
-├── Assets/
-│   ├── Logos/
-│   │   └── Main Logo without BG.png
-│   │
-│   ├── Backgrounds/
-│   │   ├── bg2.jpg
-│   │   ├── bg3.jpg
-│   │   ├── bg4.jpg
-│   │   └── bg5.jpg
-│   │
-│   └── Products/
-│       ├── bopp-packing-tape.jpg
-│       ├── bopp-colour-packing-tape.jpg
-│       ├── kraft-paper-water-activated-tape.jpg
-│       ├── masking-tape.jpg
-│       ├── aluminium-foil-tape.jpg
-│       ├── double-side-tissue-tape.jpg
-│       ├── filament-tape.jpg
-│       ├── pvc-duct-tape.jpg
-│       ├── pvc-floor-marking-tape.jpg
-│       ├── lldpe-stretch-film.jpg
-│       └── shrink-film.jpg
-│
-└── Pages/
-    ├── products.html
-    ├── products_styles.css
-    ├── products_script.js
-    └── products.json
+# Pinnacle Packaging website
 
+Static website for Pinnacle Packaging (Pvt) Ltd. It uses plain HTML, CSS, and JavaScript; no framework, package installation, or build command is required.
 
---------------Page Flow--------------------------------------------------------------------------------------
+## Deploy to Cloudflare Pages
 
-products.html
-      ↓
-products.js
-      ↓
-products.json
-      ↓
-Product data
-      ↓
-JavaScript creates product cards
-      ↓
-Displayed in products.html
+1. Push this repository to GitHub or GitLab.
+2. In the Cloudflare dashboard, go to **Workers & Pages → Create application → Pages → Connect to Git** and select the repository.
+3. Configure the deployment with **Framework preset: None**, no build command, and **Build output directory: `.`** (the repository root).
+4. Deploy. Cloudflare Pages will serve `index.html` at the site root and provide a `pages.dev` address.
+5. To use a custom domain, open the Pages project and add it under **Custom domains**.
 
+The product catalogue loads from the root-level `products.json`. Keep that file and the `Assets/` directory in the repository when deploying. The contact form uses EmailJS, which must be configured separately in `Contact_Script.js` and with the EmailJS service/template settings.
 
+## Main pages
 
--------inqury sending  flow -----
-
-
-                 PRODUCT PAGE
-                      │
-                      ▼
-              [ INQUIRE NOW ]
-                      │
-                      ▼
-                 mailto:
-                      │
-          ┌───────────┴───────────┐
-          ▼                       ▼
-       Apple Mail              Outlook
-          │                       │
-          └───────────┬───────────┘
-                      ▼
-                AUTO-DRAFTED
-                    EMAIL
-                      │
-                      ▼
-                [ SEND ]
+- `index.html` — home page and default Pages entry point
+- `About.html` — company information and certificates
+- `Product.html` — product catalogue
+- `Contact.html` — contact form and contact details

@@ -73,13 +73,13 @@ const heroBackground =
 
 const backgroundImages = [
 
-    "../Assets/Backgrounds/bg2.jpg",
+    "Assets/Backgrounds/bg2.jpg",
 
-    "../Assets/Backgrounds/bg3.jpg",
+    "Assets/Backgrounds/bg3.jpg",
 
-    "../Assets/Backgrounds/bg4.jpg",
+    "Assets/Backgrounds/bg4.jpg",
 
-    "../Assets/Backgrounds/bg5.jpg"
+    "Assets/Backgrounds/bg5.jpg"
 
 ];
 
